@@ -1,8 +1,33 @@
+.wrapper {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0 auto;
+	max-width: 510px;
+	padding-top: 10%;
+}
+.wrapper *, .wrapper *:after, .wrapper *:before {
+	-webkit-box-sizing: inherit;
+	-moz-box-sizing: inherit;
+	box-sizing: inherit;
+}
+body { margin: 0; }
+.field-box { position: relative; }
+input[type="submit"] {
+	height: 30px;
+	width: 60px;
+	float: right;
+}
+input[type="text"] {
+	height: 30px;
+	width: 450px;
+	float: left;
+}
 ul.simple-autocomplete{
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	border: 2px solid #c6c6c6;
+	border: 1px solid #c6c6c6;
 	position: absolute;
 	top: 100%;
 	left: 0;
