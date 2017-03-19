@@ -13,15 +13,19 @@
             }, options );
         self.attr("autocomplete","off");
         self.on('keyup', function(e){
-            currentInput = $(this);
-            if(e.which ==  40 && currentInput.val().length > 0){
-                self.focusItem("next");
-            }else if(e.which==38){
-                self.focusItem("prev");
-            }else{
-                clearTimeout(typingTimer);
-                typingTimer = setTimeout(self.getResponse, doneTypingInterval);
-            }
+        	if(e.which == 27 ){
+        		search_drop.remove();
+        	} else {
+	            currentInput = $(this);
+	            if(e.which ==  40 && currentInput.val().length > 0){
+	                self.focusItem("next");
+	            }else if(e.which==38){
+	                self.focusItem("prev");
+	            }else{
+	                clearTimeout(typingTimer);
+	                typingTimer = setTimeout(self.getResponse, doneTypingInterval);
+	            }
+        	}
         });
         self.on('blur', function(e){
             search_drop.remove();
